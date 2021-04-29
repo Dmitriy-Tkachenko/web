@@ -1,0 +1,24 @@
+@page {
+	margin-left: 3cm;
+	margin-right: 1cm;
+	margin-top: 2cm;
+	margin-bottom: 2cm;
+}
+
+h1 {
+	page-break-after: always;
+	text-align: center;
+}
+
+.column {
+	margin: 15px;
+	color: #000000;
+}
+
+.content {
+	color: #000000;
+}
+
+.box {
+	display: none;
+}
