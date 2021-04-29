@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body, html{
+    height:100%
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    height: 100%;
+    background-color: #00BCD4;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #0097A7;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+li a:hover {
+    background-color: #00ACC1;
+}
