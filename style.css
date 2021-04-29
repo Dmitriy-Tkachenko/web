@@ -1,1 +1,8 @@
+h1 {
+	text-align: center;
+}
 
+.column {
+	margin: 10px;
+	border: 1px solid black;
+}
