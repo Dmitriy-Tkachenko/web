@@ -3,7 +3,7 @@ $(document).ready(() => {
 		login = $("#login")[0].value;
 		pass = $("#pass")[0].value;
 		login.length > 0 && pass.length > 0? (
-			line = $("<tr><td>" + login + "</td><td>" + pass + "</td><tr>"),
+			line = $("<tr><td>" + login + "</td><td>" + pass + "</td><td>" + "<img src = 'images/img1.jpeg' class='photo'>" + "</td><tr>"),
 			$("tbody").append(line)
 		) : alert("Необходимо заполнить все поля");
 	});

@@ -1,0 +1,23 @@
+html, body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body > footer {
+    margin-top: auto;
+}
+
+h1 {
+	text-align: center;
+}
+
+.column {
+	margin: 10px;
+	border: 1px solid black;
+}
+
+.photo {
+	width: 128px;
+}
+
