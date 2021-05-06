@@ -3,13 +3,16 @@
 	padding: 0%;
 }
 
+html {
+	overflow: hidden;
+}
+
 .scene {
 	height: 100vh;
 	width: 100vw;
     background: url(../images/background.png) no-repeat center center fixed;
     background-size: cover;
     background-color: #162452;
-    overflow: hidden;
 }
 
 .earth-moon-system {
@@ -32,6 +35,36 @@
 	z-index: 1;
 }
 
+.circle {
+	position: absolute;
+    background: white;
+    width: 656px;
+    height: 656px;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    animation: pulseEarth 1s infinite alternate;
+}
+
+.star {
+	position: fixed;
+	width: 4px;
+	height: 4px;
+	background: #6e97e9;
+	border-radius: 100%;
+	z-index: 0;
+	animation: pulseStar 2s infinite alternate;
+}
+
+.meteorite {
+	position: absolute;
+	top: -600px;
+	left: 600px;
+	animation: filling 10s linear infinite;
+}
+
 @keyframes orbita {
        0%{width: 140px; z-index: 3;}
        25% {top: 270px; left: 270px; width: 200px;}
@@ -40,4 +73,20 @@
        75% {top: 330px; left: 330px; width: 80px;}
        100% {top: -50px; left: -50px; width: 140px; transform: rotate(360deg);}
 
+}
+
+@keyframes pulseEarth {
+  from { box-shadow:0px 0px 10px 3px rgba(255, 255, 255, 0.1); }
+  to { box-shadow:0px 0px 0px 30px rgba(255, 255, 255, 0.1); }
+}
+
+@keyframes pulseStar {
+  from { box-shadow:0px 0px 0px 0px rgba(255, 255, 255, 0.1); }
+  to { box-shadow:0px 0px 0px 4px rgba(255, 255, 255, 0.1); }
+}
+
+@keyframes filling {
+	20%, 100% {
+    	transform: translate(2000px, 2000px);
+  }
 }
