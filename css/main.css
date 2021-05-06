@@ -21,10 +21,23 @@
 .earth {
 	position: relative;
 	width: 670px;
+	z-index: 2;
 }
 
 .moon {
 	position: absolute;
 	top: -55px;
 	left: -55px;
+	animation: 5s orbita linear infinite;
+	z-index: 1;
+}
+
+@keyframes orbita {
+       0%{width: 140px; z-index: 3;}
+       25% {top: 270px; left: 270px; width: 200px;}
+       50% {top: 575px; left: 575px; width: 140px;}
+       65% {z-index: 1;}
+       75% {top: 330px; left: 330px; width: 80px;}
+       100% {top: -50px; left: -50px; width: 140px; transform: rotate(360deg);}
+
 }
