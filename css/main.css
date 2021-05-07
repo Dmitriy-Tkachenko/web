@@ -1,0 +1,23 @@
+h1 {
+	text-align: center;
+}
+
+.container {
+	display: grid;
+ 	grid-template-columns: 25% 50% 25%;
+ 	justify-items: center;
+}
+
+.item {
+	width: 50px;
+	height: 50px;
+	background-color: #29B6F6;
+}
+
+.item:nth-child(2n+1) {
+	background-color: #66BB6A;
+}
+
+.gap {
+	grid-row-gap: 5px;
+}
