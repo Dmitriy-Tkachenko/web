@@ -1,4 +1,4 @@
-h1, h2 {
+h1 {
 	text-align: center;
 }
 
@@ -8,12 +8,28 @@ h1, h2 {
 	margin: 10px;
 }
 
-.direction {
-	flex-direction: row;
+.container2 {
+	width: 300px;
 }
 
-.direction2 {
-	flex-direction: row-reverse;
+.container3 {
+	justify-content: flex-start;
+}
+
+.container4 {
+	justify-content: center;
+}
+
+.container5 {
+	justify-content: flex-end;
+}
+
+.container6 {
+	justify-content: space-around;
+}
+
+.container7 {
+	justify-content: space-between;
 }
 
 .rectangle {
@@ -31,4 +47,28 @@ h1, h2 {
 
 .rectangle:nth-child(2n+1) {
 	background-color: #FFC107;
+}
+
+.direction {
+	flex-direction: row;
+}
+
+.direction2 {
+	flex-direction: row-reverse;
+}
+
+.direction3 {
+	flex-direction: column;
+}
+
+.direction4 {
+	flex-direction: column-reverse;
+}
+
+.wrap {
+	flex-wrap: nowrap;
+}
+
+.wrap2 {
+	flex-wrap: wrap;
 }
