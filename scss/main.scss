@@ -1,0 +1,50 @@
+$bgColor: red;
+$itemWidth: 100%;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin centering {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin font ($size: 16px, $color: white) {
+	font-family: "Gill Sans", sans-serif;
+	font-size: $size;
+	color: $color;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 10px;
+}
+
+.item {
+	@include centering;
+	@include font (24px);
+	width: $itemWidth;
+	height: 200px;
+	background-color: $bgColor;
+
+	ul {
+		list-style: none;
+	}
+}
+
+.first {
+	&:hover {
+		background-color: #e53935;
+		height: 250px;
+		@include font (30px, black);
+
+		ul {
+			list-style: square;
+		}
+	}
+}
