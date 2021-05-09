@@ -1,0 +1,15 @@
+@mixin centering {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin font ($size: 16pt, $color: white) {
+	@if($color == white) {
+		font-family: "Gill Sans", sans-serif;
+	} @else {
+		font-family: "Trebuchet MS", sans-serif;
+	}
+	font-size: $size;
+	color: $color;
+}

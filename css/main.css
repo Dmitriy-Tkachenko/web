@@ -44,23 +44,55 @@
       -ms-flex-align: center;
           align-items: center;
   font-family: "Gill Sans", sans-serif;
-  font-size: 24px;
+  font-size: 24pt;
   color: white;
   width: 100%;
   height: 200px;
-  background-color: red;
+  background-color: #f25413;
+  font-weight: 500;
 }
 .item ul {
   list-style: none;
 }
 
-.first:hover {
-  background-color: #e53935;
+.first:hover, .third:hover {
+  background-color: color-lighten(red, 10%);
   height: 250px;
-  font-family: "Gill Sans", sans-serif;
-  font-size: 30px;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 30pt;
   color: black;
 }
-.first:hover ul {
+.first:hover ul, .third:hover ul {
   list-style: square;
+}
+
+.second {
+  background-color: #85b801;
+}
+
+.third {
+  background-color: #01a4f3;
+}
+
+.fourth {
+  background-color: #ffb901;
+}
+
+li > a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
+.item + a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
 }
