@@ -33,3 +33,16 @@ a[href]:after {
 	color: #000000;
 	content: " (" attr(href) ")";
 }
+
+html {
+	-webkit-print-color-adjust: economy;
+    print-color-adjust: economy;
+}
+
+.footer {
+	border: 1px solid black;
+}
+
+.photo { 
+	page-break-inside: avoid; 
+}
