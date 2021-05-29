@@ -72,3 +72,37 @@ h1 {
 .wrap2 {
 	flex-wrap: wrap;
 }
+
+.rectangle-2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	margin: 5px;
+	font-size: 24px;
+    font-family: "Gill Sans", sans-serif;
+    color: white;
+}
+
+.item-1 {
+    background-color: #675ba7;
+    flex-basis: 200px;
+   	flex-shrink: 0;
+   	flex-grow: 2;
+   	order: 2;
+}
+
+.item-2 {
+    background-color: #9bc850;
+    flex-basis: 200px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    order: 1;
+}
+.item-3 {
+    background-color: #a62e5c;
+    flex-basis: 200px;
+    flex-shrink: 2;
+    flex-grow: 0;
+    order: 3;
+}
