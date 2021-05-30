@@ -35,6 +35,15 @@
     border: 1px solid black;
 }
 
+.btn-middle-font {
+    font-size: 12pt;
+    border: 1px solid black;
+}
+
 .small-font {
     font-size: 10pt;
+}
+
+.middle-font {
+    font-size: 12pt;
 }
