@@ -56,3 +56,57 @@
 .large-font {
     font-size: 16pt;
 }
+
+.light-theme {
+    background-color: white;
+    color: black;
+}
+
+.dark-theme {
+    background-color: black;
+    color: white;
+}
+
+
+.switch-field[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.switch-placeholder {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 80px;
+    height: 40px;
+    background: gray;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+.switch-placeholder:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 34px;
+    height: 34px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+.switch-field:checked + .switch-placeholder {
+    background: white;
+}
+
+.switch-field:checked + .switch-placeholder:after {
+    left: calc(100% - 3px);
+    transform: translateX(-100%);
+    background: gray;
+}
+
+.switch-placeholder:active:after {
+    width: 50px;
+}
