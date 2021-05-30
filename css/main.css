@@ -1,0 +1,40 @@
+.container h1 {
+    text-align: center;
+}
+
+.container div {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.header div {
+    display: flex;
+    align-items: center;
+}
+
+.header span {
+    margin-right: 5px;
+}
+
+.header button {
+    margin: 2px;
+}
+
+
+.btn-small-font {
+    font-size: 10pt;
+    border: 1px solid black;
+}
+
+.small-font {
+    font-size: 10pt;
+}
