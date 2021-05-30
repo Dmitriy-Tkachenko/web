@@ -104,9 +104,22 @@
 .switch-field:checked + .switch-placeholder:after {
     left: calc(100% - 3px);
     transform: translateX(-100%);
-    background: gray;
+    background: black;
 }
 
 .switch-placeholder:active:after {
     width: 50px;
+}
+
+.thumb img {
+    padding: 5px;
+}
+
+.thumb img:hover {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+.thumb {
+    padding: 5px;
 }
