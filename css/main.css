@@ -1,0 +1,72 @@
+.main {
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.cards {
+	display: grid;
+   	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   	grid-row-gap: 3rem;
+   	justify-items: center;
+}
+
+.card {
+	width: 260px;
+	height: 650px;
+	border: 2px solid #7fc4fd;
+	border-radius: 10px;
+}
+
+.card__header {
+	padding-top: 40px;
+	padding-left: 30px;
+	font-family: Verdana, Geneva, sans-serif;
+	color: #7f7f7f;
+	font-size: 16pt;
+}
+
+.task {
+	position: relative;
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 200px;
+	height: 230px;
+	background-color: #f1f9ff;
+	border-radius: 10px;
+}
+
+.task__header {
+	font-family: Verdana, Geneva, sans-serif;
+	color: #2699fb;
+	font-size: 13pt;
+	padding-left: 12px;
+	padding-top: 12px;
+}
+
+.task__description {
+	font-family: Verdana, Geneva, sans-serif;
+	color: #2699fb;
+	font-size: 10pt;
+	padding-left: 12px;
+	padding-top: 24px;
+}
+
+.task__buttons {
+	position: absolute;
+	bottom: 12px;
+	right: 12px;
+}
+
+.task__edit, .task__add {
+	border: none;
+	background-color: transparent;
+}
+
+.task__edit-img, .task__add-img {
+	width: 34px;
+}
+
+.task__edit-img {
+	padding-right: 6px;
+}
+
