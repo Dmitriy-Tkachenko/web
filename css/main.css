@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+.wrapper {
+    max-width: 1177px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+header {
+    height: 220px;
+}
+
+
+.header-content {
+    margin: 0 auto;
+    padding: 55px 0px;
+    width: 100%;
+}
+
+.hearder-title {
+    text-align: center;
+    font-family: Playfair Display, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 47px;
+    letter-spacing: 1px;
+    margin-bottom: 55px;
+}
+
+#navbarTogglerDemo02 {
+    margin: 0 auto;
+    margin-right: -32px;
+}
+
+.header_navv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header_navv ul li:not(:first-child):not(:last-child) {
+    list-style-type: none;
+    display: inline;
+    margin: 0 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 2px;
+}
+
+.header_navv ul li:first-child {
+    list-style-type: none;
+    display: inline;
+    margin: 0 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 2px;
+}
+
+.header_navv ul li:last-child {
+    list-style-type: none;
+    display: inline;
+    margin: 0 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 2px;
+}
+
+.navbar {
+    display: none;
+}
+
+.hearder-title-two {
+    display: none;
+}
+
+
+
+
+
+
