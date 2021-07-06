@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    $('#switch').focus();
     $('#btn-small-font').on("click", function() {
         [...document.querySelectorAll('.size')].map((item, key) => {
             document.querySelectorAll('.size')[key].classList.remove('large-font')
