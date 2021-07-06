@@ -1,13 +1,9 @@
-body {
-    background: #121212;
-}
-
 .logo-text {
-    color: #FFFFFF;
+	color: #7f7f7f;
 }
 
 .toggle-theme__text {
-    color: #FFFFFF;
+	color: #7f7f7f;
 }
 
 .toggle-theme__label {
@@ -23,73 +19,73 @@ body {
 }
 
 .toggle-theme__input:checked + .toggle-theme__label:after {
-    background: #272727;
+    background: #bce0fd;
 }
 
 .add-task__text {
-    color: white;
+	color: #2699fb;
 }
 
 
 
 .add-task__input {
-    border: 2px solid white;
-    background-color: #272727;
-    color: white;
+	border: 2px solid #bce0fd;
+	background-color: #f1f9ff;
+	color: #2699fb;
 }
 
 .add-task__input:focus {
-    border: 2px solid white;
-    background-color: #333333;
-    color: white;
+	border: 2px solid #93cdfc;
+	background-color: #e4f2fd;
+	color: #2699fb;
 }
 
 .add-task__input:focus::-webkit-input-placeholder {
-    color: transparent;
+	color: transparent;
 }
 
 .add-task__input::placeholder {
-    color: white;
+	color: #2699fb;
 }
 
 
 .add-task__button {
-    background-color: white;
+	background-color: #2699fb;
 }
 
 .add-task__button:hover {
-    background-color: #E0E0E0;
+	background-color: #0c8efd;
 }
 
 .add-task__button:active {
-    background-color: #cfcfcf;
+	background-color: #0279de;
 }
 
 .add-task__button-text {
-    color: #272727;
+	color: white;
 }
 
 .card {
-    border: 2px solid #ffffff;
+	border: 2px solid #7fc4fd;
 }
 
 .card__header {
-    color: #ffffff;
+	color: #7f7f7f;
 }
 
 .task {
-    background-color: #272727;
+	background-color: #f1f9ff;
 }
 
 .task__header {
-    color: #ffffff;
+	color: #2699fb;
 }
 
 .task__description, .task__date-text, .task__date-value, 
-.task__responsible, .task__responsible-name, .task__took-time, .task__took-time-value  {
-    color: #ffffff;
+.task__responsible, .task__responsible-name, .task__took-time, .task__took-time-value {
+	color: #2699fb;
 }
 
 .task__edit, .task__add {
-    background-color: transparent;
+	background-color: transparent;
 }
