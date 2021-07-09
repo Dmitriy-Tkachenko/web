@@ -4,12 +4,13 @@
 	<meta charset="utf-8">
 	<title>Список задач</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/dark.css" id="theme-link">
 </head>
 <body class="body">
 	<header class="header body__header">
 		<div class="logo header__logo">Логотип</div>
 		<div class="name header__name">Tkachenko</div>
-		<button class="theme header__theme">Тема</button>
+		<label class="label">Темная тема:<input type="checkbox" v-model="checked" id="toggle-theme" @click="switchTheme()" class="theme header__theme"/></label>
 	</header>
 	<main class="main" id="main">
 		<div class="top main__top">
@@ -31,10 +32,6 @@
 			</div>
 		</div>
 		<div class="bottom main__bottom">
-			<!--<div class="small-card bottom__small-card">
-				<div class="text-task small-card__text-task">Сделать презентацию, записать видео, вставить в лендинг, доделать отчет, жееесть</div>
-				<button class="delete-card small-card__delete-card">Удалить</button>
-			</div>-->
 			<small-task @deletesmall="deletesmall(index)" :task="task" v-for="(task, index) in smallTasks" :key="index"></small-task>
 			<middle-task @deletemiddle="deletemiddle(index)" :task="task" v-for="(task, index) in middleTasks" :key="index"></middle-task>
 			<big-task @deletebig="deletebig(index)" :task="task" v-for="(task, index) in bigTasks" :key="index"></big-task>

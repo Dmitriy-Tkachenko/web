@@ -3,7 +3,7 @@ const main = Vue.createApp({
 		return {
 			visible: false,
 			textTask: '',
-			selectedOption: 1,
+			selectedOption: null,
 			smallTasks: [
 				{
 					textTask: ''
@@ -28,22 +28,25 @@ const main = Vue.createApp({
 		closeModal() {
 			this.visible = false
 			this.textTask = ''
-			this.selectedOption = 1
+			this.selectedOption = null
 		},
 		addTask() {
 			if (this.textTask != '') {
 				if (this.selectedOption == 1) {
-					this.smallTasks.push({
+					this.smallTasks.unshift({
 						textTask: this.textTask
 					})
+					this.closeModal()
 				} else if (this.selectedOption == 2) {
-					this.middleTasks.push({
+					this.middleTasks.unshift({
 						textTask: this.textTask
 					})
+					this.closeModal()
 				} else if (this.selectedOption == 3) {
-					this.bigTasks.push({
+					this.bigTasks.unshift({
 						textTask: this.textTask
 					})
+					this.closeModal()
 				}
 			}
 		},
@@ -55,8 +58,29 @@ const main = Vue.createApp({
 		},
 		deletebig(index) {
 			this.bigTasks.splice(index, 1);
+		},
+		switchTheme() {
+			$(document).ready(function() {
+			    $('#toggle-theme').change(function() {
+			        var link = document.getElementById("theme-link");
+			        let lightTheme = "css/light.css";
+			        let darkTheme = "css/dark.css";
+			        var currTheme = link.getAttribute("href");
+			        var theme = "";
+			        if(this.checked==false) {
+			            currTheme = darkTheme;
+			            theme = "dark";
+			        } else {
+			            currTheme = lightTheme;
+			            theme = "light";
+			        }
+
+			        link.setAttribute("href", currTheme);
+			        Save(theme);
+			    });
+			});
 		}
-	},
+	}
 })
 
 main.component('small-task', {

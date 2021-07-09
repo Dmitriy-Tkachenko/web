@@ -1,0 +1,61 @@
+.body {
+	background-color: #555555;
+}
+
+.header {
+	color: white;
+}
+
+.createTask {
+	background-color: #79B292;
+	color: white;
+}
+
+.small-card {
+	background-color: #F4F1E2;
+}
+
+.small-card .delete-card {
+	background-color: #DD5A08;
+	color: white;
+}
+
+.middle-card {
+	background-color: #F4F1E2;
+}
+
+.middle-card .delete-card {
+	background-color: #DD5A08;
+	color: white;
+}
+
+.big-card {
+	background-color: #F4F1E2;
+}
+
+.big-card .delete-card {
+	background-color: #DD5A08;
+	color: white;
+}
+
+.footer {
+	color: white;
+}
+
+.modal {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.window {
+	background-color: white;
+}
+
+.add-task {
+	background-color: #79B292;
+	color: white;
+}
+
+.close-modal {
+	background-color: #DD5A08;
+	color: white;
+}
