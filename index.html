@@ -10,7 +10,7 @@
 	<header class="header body__header">
 		<div class="logo header__logo">Логотип</div>
 		<div class="name header__name">Tkachenko</div>
-		<label class="label">Темная тема:<input type="checkbox" v-model="checked" id="toggle-theme" @click="switchTheme()" class="theme header__theme"/></label>
+		<label class="label">Темная тема:<input type="checkbox" v-model="checked" checked id="toggle-theme" class="theme header__theme"/></label>
 	</header>
 	<main class="main" id="main">
 		<div class="top main__top">
@@ -42,6 +42,7 @@
 	</footer>
 
 	<script src="https://unpkg.com/vue@next"></script>
+	<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

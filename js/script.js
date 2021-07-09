@@ -58,27 +58,6 @@ const main = Vue.createApp({
 		},
 		deletebig(index) {
 			this.bigTasks.splice(index, 1);
-		},
-		switchTheme() {
-			$(document).ready(function() {
-			    $('#toggle-theme').change(function() {
-			        var link = document.getElementById("theme-link");
-			        let lightTheme = "css/light.css";
-			        let darkTheme = "css/dark.css";
-			        var currTheme = link.getAttribute("href");
-			        var theme = "";
-			        if(this.checked==false) {
-			            currTheme = darkTheme;
-			            theme = "dark";
-			        } else {
-			            currTheme = lightTheme;
-			            theme = "light";
-			        }
-
-			        link.setAttribute("href", currTheme);
-			        Save(theme);
-			    });
-			});
 		}
 	}
 })
@@ -128,52 +107,25 @@ main.component('big-task', {
 	`
 })
 
-/*main.component('modal', {
-	data() {
-		return {
-			visible: false,
-			textTask: '',
-			tasks: [
-				{
-					textTask: ''
-				}
-			]
-		}
-	},
-	methods: {
-		openModal() {
-			this.visible = true
-		},
-		closeModal() {
-			this.visible = false
-		},
-		addTask() {
-			if (this.textTask != '') {
-				this.tasks.push({
-					textTask: this.textTask
-				})
-			}
-		}
-	},
-	template: `
-		<button class="createTask" @click="openModal()">Создать задачу</button>
-		<div class="modal" v-if="visible != false">
-			<div class="window modal__window">
-				<textarea class="desc window__desc" v-model="textTask"></textarea>
-				<select size="3" class="importance window__importance">
-					<option disabled>Выберите важность</option>
-					<option selected value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-				</select>
-				<div class="bottom-window window__bottom-window">
-					<button class="add-task bottom-window__add-task" @click="addTask()">Добавить</button>
-					<button class="close-modal" @click="closeModal()">Закрыть</button>
-				</div>
-			</div>
-		</div>
-	`
-})*/ 
+$(document).ready(function() {
+    $('#toggle-theme').change(function() {
+        var link = document.getElementById("theme-link");
+        let lightTheme = "css/light.css";
+        let darkTheme = "css/dark.css";
+        var currTheme = link.getAttribute("href");
+        var theme = "";
+        if(this.checked==true) {
+            currTheme = darkTheme;
+            theme = "dark";
+        } else {
+            currTheme = lightTheme;
+            theme = "light";
+        }
+
+        link.setAttribute("href", currTheme);
+        Save(theme);
+    });
+});
 
 
 main.mount('#main') 
