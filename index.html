@@ -3,15 +3,35 @@
 <head>
 	<meta charset="utf-8">
 	<title>Список задач</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
-	<header>
-
+<body class="body">
+	<header class="header body__header">
+		<div class="logo header__logo">Логотип</div>
+		<div class="name header__name">Tkachenko</div>
+		<button class="theme header__theme">Тема</button>
 	</header>
-	<main>
-		
+	<main class="main">
+		<div class="top main__top">
+			<button class="createTask">Создать задачу</button>
+		</div>
+		<div class="bottom main__bottom">
+			<div class="small-card bottom__small-card">
+				<textarea class="text-task small-card__text-task"></textarea>
+				<button class="delete-card small-card__delete-card">Удалить</button>
+			</div>
+			<div class="middle-card bottom__middle-card">
+				<textarea class="text-task middle-card__text-task"></textarea>
+				<button class="delete-card middle-card__delete-card">Удалить</button>
+			</div>
+			<div class="big-card bottom__big-card">
+				<textarea class="text-task big-card__text-task"></textarea>
+				<button class="delete-card big-card__delete-card">Удалить</button>
+			</div>
+		</div>
 	</main>
-	<footer>
+	<footer class="footer body__footer">
+		<div class="footer-content footer__footer-content">Ткаченко Дмитрий Андреевич, группа 191-362, 09.07.2021</div>
 	</footer>
 
 	<script src="https://unpkg.com/vue@next"></script>
