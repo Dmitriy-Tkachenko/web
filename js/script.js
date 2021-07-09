@@ -123,7 +123,6 @@ $(document).ready(function() {
         }
 
         link.setAttribute("href", currTheme);
-        Save(theme);
     });
 });
 
