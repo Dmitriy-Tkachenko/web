@@ -17,11 +17,11 @@
 			<div class="modal" v-if="visible != false">
 				<div class="window modal__window">
 					<textarea class="desc window__desc" v-model="textTask"></textarea>
-					<select size="3" class="importance window__importance">
+					<select size="3" v-model="selectedOption" class="importance window__importance">
 						<option disabled>Выберите важность</option>
-						<option selected value="1" v-model="ttt">1</option>
-						<option value="2" v-model="ttt">2</option>
-						<option value="3" v-model="ttt">3</option>
+						<option selected value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
 					</select>
 					<div class="bottom-window window__bottom-window">
 						<button class="add-task bottom-window__add-task" @click="addTask()">Добавить</button>
@@ -35,15 +35,9 @@
 				<div class="text-task small-card__text-task">Сделать презентацию, записать видео, вставить в лендинг, доделать отчет, жееесть</div>
 				<button class="delete-card small-card__delete-card">Удалить</button>
 			</div>-->
-			<small-task :task="task" v-for="(task, index) in tasks" :key="index"></small-task>
-			<div class="middle-card bottom__middle-card">
-				<div class="text-task middle-card__text-task">Сделать презентацию, записать видео, вставить в лендинг, доделать отчет, жееесть</div>
-				<button class="delete-card middle-card__delete-card">Удалить</button>
-			</div>
-			<div class="big-card bottom__big-card">
-				<div class="text-task big-card__text-task">Сделать презентацию, записать видео, вставить в лендинг, доделать отчет, жееесть</div>
-				<button class="delete-card big-card__delete-card">Удалить</button>
-			</div>
+			<small-task @deletesmall="deletesmall(index)" :task="task" v-for="(task, index) in smallTasks" :key="index"></small-task>
+			<middle-task @deletemiddle="deletemiddle(index)" :task="task" v-for="(task, index) in middleTasks" :key="index"></middle-task>
+			<big-task @deletebig="deletebig(index)" :task="task" v-for="(task, index) in bigTasks" :key="index"></big-task>
 		</div>
 	</main>
 	<footer class="footer body__footer">

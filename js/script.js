@@ -3,7 +3,18 @@ const main = Vue.createApp({
 		return {
 			visible: false,
 			textTask: '',
-			tasks: [
+			selectedOption: 1,
+			smallTasks: [
+				{
+					textTask: ''
+				}
+			],
+			middleTasks: [
+				{
+					textTask: ''
+				}
+			],
+			bigTasks: [
 				{
 					textTask: ''
 				}
@@ -16,24 +27,80 @@ const main = Vue.createApp({
 		},
 		closeModal() {
 			this.visible = false
+			this.textTask = ''
+			this.selectedOption = 1
 		},
 		addTask() {
 			if (this.textTask != '') {
-				this.tasks.push({
-					textTask: this.textTask
-				})
+				if (this.selectedOption == 1) {
+					this.smallTasks.push({
+						textTask: this.textTask
+					})
+				} else if (this.selectedOption == 2) {
+					this.middleTasks.push({
+						textTask: this.textTask
+					})
+				} else if (this.selectedOption == 3) {
+					this.bigTasks.push({
+						textTask: this.textTask
+					})
+				}
 			}
+		},
+		deletesmall(index) {
+			this.smallTasks.splice(index, 1);
+		},
+		deletemiddle(index) {
+			this.middleTasks.splice(index, 1);
+		},
+		deletebig(index) {
+			this.bigTasks.splice(index, 1);
 		}
 	},
 })
 
 main.component('small-task', {
 	props: ['task'],
+	methods: {
+		deletesmall() {
+			this.$emit('deletesmall');
+		}
+	},
 	template: `
 	<div class="small-card bottom__small-card" v-if="task.textTask != ''">
 		<div class="text-task small-card__text-task">{{task.textTask}}</div>
-		<button class="delete-card small-card__delete-card">Удалить</button>
+		<button class="delete-card small-card__delete-card" @click="deletesmall()">Удалить</button>
 	</div>
+	`
+})
+
+main.component('middle-task', {
+	props: ['task'],
+	methods: {
+		deletemiddle() {
+			this.$emit('deletemiddle');
+		}
+	},
+	template: `
+	<div class="middle-card bottom__middle-card" v-if="task.textTask != ''">
+		<div class="text-task middle-card__text-task">{{task.textTask}}</div>
+		<button class="delete-card middle-card__delete-card" @click="deletemiddle()">Удалить</button>
+	</div>		
+	`
+})
+
+main.component('big-task', {
+	props: ['task'],
+	methods: {
+		deletebig() {
+			this.$emit('deletebig');
+		}
+	},
+	template: `
+	<div class="big-card bottom__big-card" v-if="task.textTask != ''">
+		<div class="text-task big-card__text-task">{{task.textTask}}</div>
+		<button class="delete-card big-card__delete-card" @click="deletebig()">Удалить</button>
+	</div>		
 	`
 })
 
